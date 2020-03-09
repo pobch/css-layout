@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  border: 1px solid mediumpurple;
+}
+
+.container .item {
+  border: 1px solid salmon;
+
+  /* handle long words */
+  overflow-wrap: break-word;
+
+  /* Other than `overflow-wrap` property, we need both of these addition properties 
+  to make long word wrapped into a new line. We cannot instead use `flex-basis: 25%;` and ignore `width` */
+  flex-basis: auto;
+  width: 25%;
+}
