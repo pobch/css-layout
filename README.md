@@ -1,3 +1,4 @@
 # Reference
 
-https://csslayout.io/patterns
+- https://csslayout.io/patterns
+- Codepen collections

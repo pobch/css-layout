@@ -1,0 +1,33 @@
+:root {
+  --circle-diameter: 32px;
+}
+
+.container {
+  display: flex;
+  height: var(--circle-diameter);
+  width: calc(var(--circle-diameter) * 2);
+
+  /* pill shape */
+  border-radius: 25%/50%;
+
+  /* OFF state */
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* ON state */
+input:checked + .container {
+  background-color: #357edd;
+  border: 1px solid #357edd;
+
+  /* push the circle to the right */
+  justify-content: flex-end;
+}
+
+.container .circle {
+  width: var(--circle-diameter);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+
+  background-color: #ffffff;
+}
