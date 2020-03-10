@@ -1,0 +1,42 @@
+.p-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+
+  /* debugger */
+  border: 1px solid tomato;
+}
+
+.p-rating .p-rating-star {
+  position: relative;
+
+  /* reset styles for button */
+  font-size: unset;
+  font-size: 32px;
+  background-color: transparent;
+  border: transparent;
+  margin: 0;
+  padding: 0;
+
+  /* debugger */
+  border: 1px solid black;
+}
+
+/* 
+Make all previous stars selected while hovering on a star.
+Need to combine with `flex-direction: row-reverse;` on the container
+*/
+.p-rating .p-rating-star:hover,
+.p-rating .p-rating-star:hover ~ .p-rating-star {
+  color: transparent;
+}
+
+.p-rating .p-rating-star:hover::before,
+.p-rating .p-rating-star:hover ~ .p-rating-star::before {
+  content: '\2605';
+  color: #00449e;
+
+  position: absolute;
+  left: 0;
+}
